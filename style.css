@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+#top-banner {
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 220%;
+    font-weight: 900;
+    justify-content: space-evenly;
+    transition: background 0.3s;
+}
+
+body {
+    background-color: black;
+    align-content: center;
+}
+
+#status-bar {
+    font-family:'Noto Sans', sans-serif;
+    background-color: white;
+    color: maroon;
+    display: flex;
+    font-size: 120%;
+    font-weight: 600;
+    justify-content: space-evenly;
+}
+
+.inactive {
+    color: rgb(182, 106, 106);
+}
+#game{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    
+    margin-right: 10%;
+    justify-content: center;
+}
+.row{
+    margin-top: 4%;
+    margin-left: 3%;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+   
+}
+.tile{
+    height:120px;
+    width:120px;
+    margin-right: 50px;
+    background-color: blue;
+    border-radius: 10%;
+    
+    transition: transform 0.2s background 0.3s;
+}
+.tile:hover{
+    transition: background 0.3s ;
+    transform:scale(1.2) ;
+}
+#new, .mode{
+    cursor: pointer;
+}
