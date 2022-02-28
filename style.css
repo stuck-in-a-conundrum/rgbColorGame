@@ -54,6 +54,7 @@ body {
 }
 .tile:hover
 {
+    transition: background 0.2s;
     transform:scale(1.05);
 }
 #new, .mode{
