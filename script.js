@@ -13,7 +13,7 @@ function getColor(){
     r=Math.floor(Math.random()*255)
     g=Math.floor(Math.random()*255)
     b=Math.floor(Math.random()*255)
-    return `rgb(${r},${g},${b})`
+    return `rgb(${r}, ${g}, ${b})`
 }
 
 function tileClicked(event){
@@ -60,6 +60,7 @@ function buildTiles(){
         for(j=1;j<=3;j++){
             var tile=document.createElement("div")
             tile.classList.add("tile")
+            tile.style.transition=
             cond=n==pos
             tile.style.backgroundColor=cond?color:getColor();
             //console.log(pos)
@@ -80,7 +81,7 @@ function newGame(){
     inactive=document.getElementsByClassName("inactive")
     rgbval.textContent=color
     stat.style.color="darkBlue"
-    banner.style.backgroundColor="rgb(223, 191, 12)"
+    banner.style.backgroundColor="rgb(255,188,2)"
     buildTiles()
 }
 document.getElementById("new").addEventListener("click",newGame)

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 #top-banner {
-    font-family: sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     color: white;
     text-align: center;
     font-size :2em;
@@ -12,6 +12,7 @@
 
 body {
     background-size: cover;
+    margin:0;
     background-color: black;
     align-content: center;
 }
@@ -30,26 +31,36 @@ body {
     color: rgb(182, 106, 106);
 }
 #game{
-    padding: 10vh 0;
+    height: 70vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .row{
-    margin-top: 4%;
     width: 100%;
     justify-content: center;
     align-content: center;
     display: flex;
    
 }
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .tile{
-    height:120px;
-    width:120px;
-    margin-right: 3%;
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    height: 150px;
+    width: 150px;
     background-color: blue;
     border-radius: 10%;
-    
+    margin: 0 2vw;
     transition: transform 0.2s background 0.3s;
 }
 .tile:hover
@@ -59,4 +70,13 @@ body {
 }
 #new, .mode{
     cursor: pointer;
+}
+
+#new, .mode>span {
+    padding: 0 5px;
+}
+
+#new:hover, .mode>span:hover {
+    background-color: black;
+    color: white;
 }
